@@ -27,19 +27,18 @@ public class Player : MonoBehaviour
         pre = transform.position;
         anim.SetFloat("Speed", velocity);
 
-        if (Time.time > counter)
-        {
-            counter = Time.time + delay;
-            Debug.Log(counter);
-            }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(bullet, muzzle.position, muzzle.rotation);
-            anim.SetTrigger("Shoot");
+       
 
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+               if (counter < Time.time)
+              {
+                counter = Time.time + delay;
+                Instantiate(bullet, muzzle.position, muzzle.rotation);
+                anim.SetTrigger("Shoot");
+              }
         }
-
         //  rb.AddForce(Vector3.down * 13);
         if (jumping == true)
         {
