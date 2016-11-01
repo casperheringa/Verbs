@@ -11,5 +11,11 @@ public class Bullet : MonoBehaviour{
     {
         transform.Translate(Vector3.up * .2f);
     }
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.transform.tag == "Floor")
+        {
+            Destroy(gameObject);
+        }
+    }
     
 }
