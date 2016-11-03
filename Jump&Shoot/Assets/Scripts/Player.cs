@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 {
     public Animator anim;
     Rigidbody2D rb;
-    public int speed = 15;
+    public int speed;
     public bool jumping = false;
     public Transform muzzle;
     public GameObject bullet;
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            speed = 15;
+            speed = 19  ;
         }
         if (Input.GetKey(KeyCode.D))
         {
