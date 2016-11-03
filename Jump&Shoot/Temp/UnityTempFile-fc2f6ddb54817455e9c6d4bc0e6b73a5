@@ -88,6 +88,7 @@
 'Assets/Scripts/Bullet.cs'
 'Assets/Scripts/Player.cs'
 'Assets/Scripts/SceneChanger.cs'
+'Assets/Scripts/StartTime.cs'
 'Assets/Scripts/Targets.cs'
 'Assets/Scripts/Timer.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'

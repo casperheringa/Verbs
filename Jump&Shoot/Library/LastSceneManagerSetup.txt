@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Casper.unity
+=======
+- path: Assets/Scenes/Nino.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
