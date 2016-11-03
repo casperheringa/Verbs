@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
+
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
-	private float timer;
+	private float _timer;
 	[SerializeField]
-	private Text timerText;
-	private GameObject[] targets;
+	private Text _timerText;
+	private GameObject[] _targets;
 
 
 	void Start () {
@@ -14,14 +14,13 @@ public class Timer : MonoBehaviour {
 	}
 
 	void Update () {
-		targets = GameObject.FindGameObjectsWithTag("target");
-		if (targets.Length > 0) {
-			if (Time.time > timer)
-			{
-				timer = Time.time ;
-				timer = Mathf.RoundToInt(timer);
-				timerText.text = timer.ToString();
-			}
+		_targets = GameObject.FindGameObjectsWithTag("target");
+		if (_targets.Length > 0) {
+		    if (!(Time.time > _timer)) return;
+		    _timer = Time.time;
+		    _timer = Mathf.RoundToInt(_timer);
+		    // ReSharper disable once SpecifyACultureInStringConversionExplicitly
+		    _timerText.text = _timer.ToString();
 		} else {
 			OnComplete();
 		}
